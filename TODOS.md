@@ -10,7 +10,7 @@
 8.
 9.
 10.
-11. Uncomment this test when all other tests succeed.
+11.
 12. Create read success test
 13. Create delete success test.
 14. Create delete fail test (on non existent id)

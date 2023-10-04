@@ -145,7 +145,8 @@ void main() {
       expect(
         response.body(),
         completion(
-            contains('This is an API for crating and editing pixel art :-)')),
+          contains('This is an API for crating and editing pixel art :-)'),
+        ),
       );
     });
 
@@ -190,14 +191,16 @@ void main() {
     test('DELETE /:id - fails to delete non existing', () async {
       when(() => context.request).thenAnswer((e) => Request.delete(Uri.base));
       final response =
-          await pixelArtSlugRoute.onRequest(context, "nonExistingId");
+          await pixelArtSlugRoute.onRequest(context, 'nonExistingId');
       expect(response.statusCode, equals(HttpStatus.notFound));
     });
 
     test('GET / - lists all PixelArts', () async {
-      when(() => context.request).thenAnswer((e) => Request.get(
-            Uri.base,
-          ));
+      when(() => context.request).thenAnswer(
+        (e) => Request.get(
+          Uri.base,
+        ),
+      );
 
       final response = await pixelArtRoute.onRequest(context);
       expect(response.statusCode, equals(HttpStatus.ok));

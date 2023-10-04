@@ -79,13 +79,15 @@ class HivePixelArtRepository extends AbstractPixelArtRepository {
 
   @override
   Future<Stream<PixelArt?>> changes(String itemId) async {
-    return Future.value(box.watch(key: itemId).map(
-      (event) {
-        return (event.value != null && event.value is String)
-            ? PixelArt.deserialize(event.value as String)
-            : null;
-      },
-    ));
+    return Future.value(
+      box.watch(key: itemId).map(
+        (event) {
+          return (event.value != null && event.value is String)
+              ? PixelArt.deserialize(event.value as String)
+              : null;
+        },
+      ),
+    );
   }
 
   Future<CRUDResult<void>> clear() async {
