@@ -201,7 +201,9 @@ void main() {
 
       final response = await pixelArtRoute.onRequest(context);
       expect(response.statusCode, equals(HttpStatus.ok));
-      // TODO 6. Check response body for list of PixelArt.
+      final result = await response.body();
+      expect('[]', result);
+      // TODO 21: write test for non empty list
     });
 
     test('GET / - stream returns 404 for invalid ws request', () async {

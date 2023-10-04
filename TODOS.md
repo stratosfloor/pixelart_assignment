@@ -5,7 +5,7 @@
 3.
 4.
 5.
-6. Check response body for list of PixelArt.
+6.
 7.
 8.
 9.
