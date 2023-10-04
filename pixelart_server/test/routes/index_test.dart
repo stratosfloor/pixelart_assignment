@@ -39,8 +39,9 @@ void main() {
     });
 
     test('create and read a PixelArt', () async {
-      // TODO: 1. use the repository and the testpixelart to attempt to create a pixelart, then attempt to read it. Verify responses uing expect
-      fail("unimplemented test");
+      await repository.create(testPixelArt);
+      final pixelart = await repository.read(testPixelArt.id);
+      expect(pixelart.value?.id, testPixelArt.id);
     });
 
     test('update a PixelArt', () async {

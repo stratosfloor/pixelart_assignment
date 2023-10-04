@@ -1,13 +1,13 @@
 ## Todos
 
-1. use the repository and the testpixelart to attempt to create a pixelart, then attempt to read it. Verify responses uing expect
+1.
 2. use the repository to list the pixelarts. expect the list of pixelarts to be longer than 0
 3. Check response body for serialized PixelArt.
 4. Check response body for serialized PixelArt.
 5. Check response body for serialized PixelArt.
 6. Check response body for list of PixelArt.
-7. save serialized item to box if it does not already exist
-8. attempt to read item from box by id. Remember to deserialize and error handle.
+7.
+8.
 9. Read from the repository. Await the request and return a result. Make sure to error handle.
    Take inspiration from the put method
 10. Deserialize the request body to retrieve a pixelArt for creation.
