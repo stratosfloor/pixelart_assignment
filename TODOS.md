@@ -2,7 +2,7 @@
 
 1.
 2.
-3. Check response body for serialized PixelArt.
+3.
 4. Check response body for serialized PixelArt.
 5. Check response body for serialized PixelArt.
 6. Check response body for list of PixelArt.
@@ -10,7 +10,7 @@
 8.
 9. Read from the repository. Await the request and return a result. Make sure to error handle.
    Take inspiration from the put method
-10. Deserialize the request body to retrieve a pixelArt for creation.
+10.
 11. Uncomment this test when all other tests succeed.
 12. Create read success test
 13. Create delete success test.

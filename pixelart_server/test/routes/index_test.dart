@@ -155,7 +155,8 @@ void main() {
 
       final response = await pixelArtRoute.onRequest(context);
       expect(response.statusCode, equals(HttpStatus.ok));
-      // TODO 3. Check response body for serialized PixelArt.
+      final result = await response.body();
+      expect(art.serialize(), result);
     });
 
     test('GET /:id - reads a PixelArt', () async {

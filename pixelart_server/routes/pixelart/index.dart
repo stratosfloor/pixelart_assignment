@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:dart_frog/dart_frog.dart';
 import 'package:pixelart_server/src/helpers.dart';
 import 'package:pixelart_server/src/hive_repository.dart';
@@ -16,12 +17,10 @@ Future<Response> onRequest(RequestContext context) async {
 
 Future<Response> post(RequestContext context) async {
   final repository = await context.read<Future<HivePixelArtRepository>>();
-
   final request = context.request;
 
-  // TODO: 10. Deserialize the request body to retrieve a pixelArt for creation.
-  PixelArt pixelArt = throw UnimplementedError();
-
+  final body = await request.body();
+  final pixelArt = PixelArt.deserialize(body);
   final result = await repository.create(pixelArt);
 
   if (result.isSuccess) {
