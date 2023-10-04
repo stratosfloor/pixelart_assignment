@@ -1,7 +1,7 @@
 ## Todos
 
 1.
-2. use the repository to list the pixelarts. expect the list of pixelarts to be longer than 0
+2.
 3. Check response body for serialized PixelArt.
 4. Check response body for serialized PixelArt.
 5. Check response body for serialized PixelArt.

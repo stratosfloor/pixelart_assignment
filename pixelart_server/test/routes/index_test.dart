@@ -66,9 +66,9 @@ void main() {
 
     test('list all PixelArts', () async {
       await repository.create(testPixelArt);
-
-      // TODO: 2. use the repository to list the pixelarts. expect the list of pixelarts to be longer than 0
-      fail("unimplemented test");
+      final list = await repository.list();
+      expect(list.isSuccess, true);
+      expect(list.value?.length, isPositive);
     });
 
     test('watch changes on a PixelArt', () async {
