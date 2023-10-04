@@ -4,7 +4,7 @@
 2.
 3.
 4.
-5. Check response body for serialized PixelArt.
+5.
 6. Check response body for list of PixelArt.
 7.
 8.

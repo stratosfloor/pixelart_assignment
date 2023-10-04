@@ -176,7 +176,8 @@ void main() {
 
       final response = await pixelArtSlugRoute.onRequest(context, art.id);
       expect(response.statusCode, equals(HttpStatus.ok));
-      // TODO 5. Check response body for serialized PixelArt.
+      final result = await response.body();
+      expect(art.serialize(), result);
     });
 
     test('DELETE /:id - deletes a PixelArt', () async {
