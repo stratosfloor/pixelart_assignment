@@ -13,8 +13,8 @@ class HTTPPixelArtRepository extends AbstractPixelArtRepository {
   final String _WSurl;
 
   const HTTPPixelArtRepository({required this.url})
-      : _HTTPurl = "http://" + url,
-        _WSurl = "ws://" + url;
+      : _HTTPurl = 'http://$url',
+        _WSurl = 'ws://$url';
 
   @override
   Future<CRUDResult<PixelArt>> create(PixelArt item) async {
@@ -94,8 +94,8 @@ class HTTPPixelArtRepository extends AbstractPixelArtRepository {
   }
 
   @override
-  Future<Stream<PixelArt?>> changes(String id) async {
-    final uri = Uri.parse('$_WSurl/$id/stream');
+  Future<Stream<PixelArt?>> changes(String itemId) async {
+    final uri = Uri.parse('$_WSurl/$itemId/stream');
     final channel = WebSocketChannel.connect(uri);
     return channel.stream.map((event) {
       if (event.runtimeType == String) {
