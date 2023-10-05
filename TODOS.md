@@ -12,11 +12,11 @@
 10.
 11.
 12.
-13. Create delete success test.
-14. Create delete fail test (on non existent id)
+13.
+14.
 15. Uncomment this test when the other tests succeeed.
 16.
 17.
 18.
-19. use HTTP DELETE to HTTPURL/[id]. Make sure to error handle and return proper crudresults.
+19.
 20. Use the create/read/list/update/delete/changes methods of the repository to show how it is supposed to be used.
