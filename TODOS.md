@@ -14,7 +14,7 @@
 12.
 13.
 14.
-15. Uncomment this test when the other tests succeeed.
+15.
 16.
 17.
 18.
