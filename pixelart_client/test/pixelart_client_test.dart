@@ -47,7 +47,10 @@ void main() {
       expect(result.status, equals(CRUDStatus.Success));
     });
 
-    // TODO: 12. Create read success test
+    test('Read PixelArt successfully', () async {
+      final result = await repository.read(art.id);
+      expect(result.status, equals(CRUDStatus.Success));
+    });
 
     test('Fail to read PixelArt due to not found', () async {
       final id = "nonexistentId";
@@ -93,9 +96,7 @@ void main() {
     });
 
     test('PixelArt Changes stream successfully', () async {
-
-          // TODO: 15. Uncomment this test when the other tests succeeed.
-
+      // TODO: 15. Uncomment this test when the other tests succeeed.
 
 /*       PixelArt art = PixelArt(
           id: uuid.v4(),
@@ -126,7 +127,6 @@ void main() {
       await repository.delete(art.id); */
 
       fail("unimplemented test");
-
     });
   });
 }
