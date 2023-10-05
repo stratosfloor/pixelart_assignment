@@ -17,6 +17,6 @@
 15. Uncomment this test when the other tests succeeed.
 16.
 17.
-18. use HTTP PUT with item serialized as body to HTTPURL/[id]. Make sure to error handle and return proper crudresults.
+18.
 19. use HTTP DELETE to HTTPURL/[id]. Make sure to error handle and return proper crudresults.
 20. Use the create/read/list/update/delete/changes methods of the repository to show how it is supposed to be used.
