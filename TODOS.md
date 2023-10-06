@@ -19,4 +19,4 @@
 17.
 18.
 19.
-20. Use the create/read/list/update/delete/changes methods of the repository to show how it is supposed to be used.
+20.

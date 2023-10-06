@@ -43,8 +43,6 @@ void main() async {
     print('Connected to server.');
   }
 
-  // TODO: 20. Use the create/read/list/update/delete/changes methods of the repository to show how it is supposed to be used.
-
   // Create pixelArt
   final newPixelArt = await repository.create(art);
   print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
